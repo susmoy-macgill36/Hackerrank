@@ -1,0 +1,133 @@
+1(a)
+
+import numpy as np
+x = np.linspace(2,3,5)
+
+print(x[1]+1)
+
+1(b)
+import numpy as np
+y= np.linspace(4,12,5)
+print(y)
+
+1(c)
+
+import numpy as np
+
+o=np.ones(5)
+
+print(np.array([x,o,y]))
+
+
+
+2.
+A = np.array([[1,2],[4,-1]],dtype=int)
+
+B= np.array([[4,-2],[-6,3]],dtype=int)
+
+(a)
+
+C1 = np.add(A,B)
+print(C1)
+
+
+
+C2 = np.subtract(A,B)
+print(C2)
+
+(b)
+
+print(A.dot(B))
+
+print(B.dot(A))
+
+(c)
+
+def f(x,y):
+  
+  return B[x,y] + A[x,y]* (B[x,y] ** (1/4))
+g1 = np.fromfunction(f,(2,2),dtype= int)
+print(g1)
+
+
+
+3(a)
+
+x=[7 ,6 ,1 ,2 ,0 ,-1 ,4 ,3 ,-2, 0]
+
+negindex =[]
+
+for i in range(len(x)):
+  
+  if x[i] <0:
+    negindex.append(i)
+
+for i in range(len(negindex)):
+  x[negindex[i]] = 0
+
+print(x)
+
+
+3(b)
+
+
+y=[]
+
+
+for i in range(len(x)):
+  
+  if x[i] > 3:
+    y.append(x[i])
+
+
+print(y)
+
+
+4.
+
+import math
+
+from matplotlib import pyplot as plt
+x =[]
+y= []
+for i in range(5):
+  x.append(i)
+  ee = math.exp(i**2)
+  y.append(ee)
+  
+
+plt.plot(x,y,color ='r')
+
+plt.title('x vs e^x**2')
+plt.xlabel('x')
+plt.ylabel('e^x**2')
+
+plt.show()
+
+
+
+5(a)
+
+Transpostion of A.
+
+5(b)
+Printing all rows, printing  columns from index: 1 to 3.
+
+5(c)
+
+Printing row of index 2,and printing  columns from index: 3 to 2.
+
+
+5(d)
+
+After reshaping, 2 rows and 6 column found.
+
+5(e)
+
+Printing all values of A.
+
+ 
+
+
+
+
